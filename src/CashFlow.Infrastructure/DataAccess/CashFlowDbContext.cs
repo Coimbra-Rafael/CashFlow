@@ -9,6 +9,10 @@ public class CashFlowDbContext : DbContext
     public DbSet<Expense> Expenses { get; set; }
 
     public CashFlowDbContext(DbContextOptions<CashFlowDbContext> options) : base(options) {}
+    public CashFlowDbContext()
+    {
+        
+    }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
