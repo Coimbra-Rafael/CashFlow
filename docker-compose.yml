@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql
+    container_name: mysql-cash-flow
+    environment:
+      - MYSQL_USER=rafael
+      - MYSQL_PASSWORD=1qazzaq!
+      - MYSQL_DATABASE=cash_flow
+      - MYSQL_ROOT_PASSWORD=1qazzaq!
+    ports:
+      - "3306:3306"
+    volumes:
+    - db_mysql_data:/data/mysql
+
+volumes:
+  db_mysql_data:
